@@ -45,22 +45,27 @@
     <main class="mdl-layout__content">
       <div class="right-image">
         <img
-          src="./images/area_and_perimeter.png" alt="white text showing rectangle calculations on black background, image" />
+          src="./images/area_and_perimeter.png"
+          alt="white text showing rectangle calculations on black background, image" />
       </div>
       <div class="page-content">
         <p>The dimensions of a rectangle are: 5cm and 3cm.</p>
       </div>
-      <!-- Simple Textfield for integers-->
-      <form action="answer.php" method="GET">
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="submit">
-          Click ENTER to calculate the area and the perimeter.
-        </button>
-      </form>
+      <?php
+      $area = 5 * 3;
+      $perimeter = 5 + 5 + 3 + 3;
+      $area = (string) $area;
+      $perimeter = (string) $perimeter;
 
+      echo '<div class="page-content-answer">';
+      echo '<div id="area">';
+      echo '<p>The area is: ' . $area . 'cm²</p>';
+      echo '</div>';
+      echo '<div id="perimeter">';
+      echo '<p>The perimeter is: ' . $perimeter . 'cm</p>';
+      echo '</div>';
+      echo '</div>';
+      ?>
     </main>
   </div>
 </body>
